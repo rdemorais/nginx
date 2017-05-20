@@ -5,4 +5,4 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 EXPOSE 80
-CMD ["service", "nginx", "restart"]
+CMD ["nginx", "-g", "daemon off;"]
